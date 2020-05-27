@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="css/validacao.css">
+</head>
+
+<body>
+    <div class="painelUsuario">
+        <form id="formulario">
+            <div class="title">
+                <h1>Comece sua jornada agora!</h1>
+            </div>
+            <div class="divCadastro">
+                <label for="nome" class="labelCadastro">Nome:
+                    <input type="text" name="nome" id="nome" required minlength="3" autocomplete="off"
+                        class="form-control">
+                </label>
+            </div>
+
+            <div class="divCadastro">
+                <label for="email" class="labelCadastro">E-mail:
+                    <input type="email" name="email" id="email" required autocomplete="off" class="form-control">
+                </label>
+            </div>
+
+            <div class="divCadastro">
+                <label for="cpf" class="labelCadastro">CPF:
+                    <input type="text" name="cpf" id="cpf" required autocomplete="off" minlength="11" maxlength="11"
+                        class="form-control" data-mask="000.000.000-00">
+                </label>
+            </div>
+
+            <div class="divCadastro">
+                <label for="celular" class="labelCadastro">Celular:
+                    <input type="text" name="celular" id="celular" required autocomplete="off" minlength="14"
+                        maxlength="14" class="form-control" data-mask="(00) 0000-0000">
+                </label>
+            </div>
+
+            <div class="divCadastro">
+                <label for="senha" class="labelCadastro">Senha:
+                    <input type="password" name="senha" id="senha" required autocomplete="off" class="form-control">
+                </label>
+            </div>
+
+            <div class="divCadastro">
+                <label for="confirmaSenha" class="labelCadastro">Confirmar senha:
+                    <input type="password" name="confirmaSenha" id="confirmaSenha" required autocomplete="off"
+                        class="form-control">
+                </label>
+            </div>
+
+            <div class="divCadastro">
+                <label for="dataNascimento" class="labelCadastro">Data de nascimento:
+                    <input type="text" name="dataNascimento" id="dataNascimento" required autocomplete="off"
+                        class="form-control" data-mask="00/00/0000">
+                </label>
+            </div>
+
+            <div class="divCadastro" id="button-cadastro">
+                <input type="submit" value="Cadastre-se" class='btn float-right login_btn' id="botao" onclick="validar()">
+            </div>
+        </form>
+    </div>
+
+    <!-- Incluir o jQuery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js">
+    </script>
+
+    <!-- Incluindo o plugin validate (jQuery) -->
+    <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.19.1/dist/jquery.validate.js">
+    </script>
+
+    <!--Plugin Máscaras IgorEscobar-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js">
+    </script>
+
+    <!-- Trabalhando com nosso próprio script -->
+    <script type="text/javascript" src='./js/validacao.js'></script>
+    <script type="text/javascript" src='./js/jquery.mask.js'></script>
+
+</body>
+
+</html>
